@@ -8,8 +8,8 @@ Created on Sun Aug  3 12:40:00 2025
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
-diabetic_model=pickle.load(open('C:/Users/PC/Desktop/multiple diseases predictive system/saved models/diabeticdiseases_trained_model.sav','rb'))
-heart_diseases_model=pickle.load(open('C:/Users/PC/Desktop/multiple diseases predictive system/saved models/heartdiseases_trained_model.sav','rb'))
+diabetic_model=pickle.load(open('saved models/diabeticdiseases_trained_model.sav','rb'))
+heart_diseases_model=pickle.load(open('saved models/heartdiseases_trained_model.sav','rb'))
 with st.sidebar:
     selected=option_menu('multiple diseases predictive system',['Diabetic prediction','Heart diseases prediction'],default_index=0)
 if(selected=='Diabetic prediction'):
@@ -117,3 +117,4 @@ if (selected == 'Heart diseases prediction'):
     st.success(heart_diagnosis)
 
         
+
